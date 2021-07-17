@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+	.submit {
+  background-color: white; 
+  border: 2px solid #008CBA;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.submit:hover {background-color: #3e8e41}
+
+.submit:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+      body
+      {
+        background-color: #ccffcc;
+
+
+      } 
+#card{
+  background-color: #ccff99;
+}
+    
+</style>
+	<title> Predict Disease</title>
+  <link rel="stylesheet" type="text/css" href="CSS.css">
+</head>
+<body>
+  <center>
+<p style="background-color: black;color: white;font-size: 20px; text-align: center;">Enter Your Choice For Prediction</legend><br>
+	<div class="card card-body" style=" width: 50%; align-items: center; margin: 50px">
+       <form method="post" action="/work">
+    	
+        <input class =" submit" type="submit" value="Cancer" name="action1"/>
+        <input class="submit" type="submit" value="Heart disease" name="action2" />
+    </form>
+</div>
+</center>
+</body>
+</html>

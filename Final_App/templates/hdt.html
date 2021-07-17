@@ -1,0 +1,115 @@
+<html>
+	<head>
+	<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<title>Heart Disease Test</title>
+		<style type="text/css">
+			body
+			{
+				background-color: #ccffcc;
+
+
+			}	
+#card{
+	background-color: #ccff99;
+}
+		</style>
+	</head>
+	<body>
+	<!-- Java Script -->	
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+		
+		<!-- Navbar-->
+		<nav class="navbar navbar-dark bg-dark">
+			<span class="navbar-brand mb-0 h1">Heart Disease Test</span>
+		</nav>
+		<div class="container">
+			<br>
+			<!--Form-->
+			<form action = "{{url_for('prediction1')}}" method ="POST" >
+				<fieldset>
+				<legend>Heart Disease Test Form</legend><br>
+				  <div class="card card-body" id="card">
+					 
+<!------------------------------------------------------------------------------------------------->
+
+						<div class="form-group row">
+							<div class="col-sm">
+								<label for="BMI">BMI>24</label>
+								<select class="form-control" id="BMI" name="BMI" required>
+								  <option disabled selected value> -- Select an Option -- </option>
+								  <option value = "0">False</option>
+								  <option value = "1">True</option>
+								</select>
+							  </div>
+							  <div class="col-sm">
+								<label for="phist">Past History</label>
+								<select class="form-control" id="phist" name="phist" required>
+								  <option disabled selected value> -- Select an Option -- </option>
+								  <option value = "0">NO</option>
+								  <option value = "1">YES</option>
+								</select>
+							  </div>
+							  <div class="col-sm">
+								<label for="fhist">Family history</label>
+								<select class="form-control" id="fhist" name="fhist" required>
+								  <option disabled selected value> -- Select an Option -- </option>
+								  <option value = "0">NO</option>
+								  <option value = "1">YES</option>
+								</select>
+							  </div>
+							  <div class="col-sm">
+								<label for="alcohol">DO YOU TAKE FREQUENT ALCOHOL</label>
+								<select class="form-control" id="alcohol" name="alcohol" required>
+								  <option disabled selected value> -- Select an Option -- </option>
+								  <option value = "0">NO</option>
+								  <option value = "1">YES</option>
+								</select>
+							  </div>
+							  <div class="col-sm">
+								<label for="smoke">DO YOU SMOKE?</label>
+								<select class="form-control" id="smoke" name="smoke" required>
+								  <option disabled selected value> -- Select an Option -- </option>
+								  <option value = "0">NO</option>
+								  <option value = "1">YES</option>
+								</select>
+							  </div>
+						  </div>
+
+
+<!------------------------------------------------------------------------------------------------------->
+					  <div class="form-group">
+						<input class="btn btn-primary" type="submit" value="Result">
+					  </div>
+					  
+					  <!--Prediction Result-->
+					  
+					<!--Prediction Result-->
+					 <div>
+						
+						<!-- For loop logic of jinja template -->
+							<ul>
+								<strong style="color:red">
+							{%for i in result3%}
+  
+    							<li>{{i}}</li>
+							{%endfor%}
+						</strong>
+							</ul>
+						
+  
+					 </div>
+				     </div>
+			 </fieldset>
+			</form>
+			
+		</div>
+		
+	</body>
+</html>
